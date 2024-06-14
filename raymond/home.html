@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  
+    
+  <style>
+   body {
+  background-color: #066;
+}
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#list1 {
+    margin: 10% 100px;
+    width: 500px;
+}
+
+#image1 {
+    background-image: url('gj.gif');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 300px;
+}
+
+#list1 > li {
+    width: 100%;
+}
+
+.transform {
+    position: relative;
+    top: 0;
+    left: 0;
+    -moz-transform: rotatex(65deg) rotatey(10deg) rotatez(45deg);
+    -ms-transform: rotatex(65deg) rotatey(10deg) rotatez(45deg);
+    -o-transform: rotatex(65deg) rotatey(10deg) rotatez(45deg);
+    -webkit-transform: rotatex(65deg) rotatey(10deg) rotatez(45deg);
+    transform: rotatex(65deg) rotatey(10deg) rotatez(45deg);
+    -moz-box-shadow: 50px 50px 40px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 50px 50px 40px rgba(0, 0, 0, 0.7);
+    box-shadow: 50px 50px 40px rgba(0, 0, 0, 0.7);
+    -moz-transition: top 1s;
+    -o-transition: top 1s;
+    -webkit-transition: top 1s;
+    transition: top 1s;
+}
+
+#list1 > li:hover > .transform {
+    top: -50px;
+}
+
+.description {
+    width: 350px;
+    margin-top: 60px;
+    color: #FFF;
+    font-family: helvetica;
+    font-size: 1.5em;
+    text-align: center;
+    opacity: 0;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+ }
+
+#list1 > li:hover > .description {
+    opacity: 1;
+    margin-top: 10px;
+}
+.custom-button {
+    display: inline-block;
+    font-size: 18px; /
+    border: 2px solid gold;
+    border-radius: 5px;
+    background-color: #4CAF50; 
+    color: white;
+    padding: 12px 24px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase; 
+}
+
+.custom-button:hover {
+    background-color: #45a049; 
+    color: gold; 
+}
+/* Media queries for tablet */
+@media screen and (max-width: 768px) {
+    #list1 {
+        margin: 10% 50px;
+        width: 100%;
+    }
+
+    #image1 {
+        height: 150px;
+        width: 200px;
+    }
+
+    .description {
+        width: 80%;
+        font-size: 1.2em;
+    }
+
+    .custom-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Media queries for mobile */
+@media screen and (max-width: 480px) {
+    #list1 {
+        margin: 10% 20px;
+        width: 100%;
+    }
+
+    #image1 {
+        height: 120px;
+        width: 160px;
+    }
+
+    .description {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .custom-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+  </style>
+ 
+
+  
+</head>
+
+<body background="g.gif">
+  <center>
+  <ul id="list1">
+    <li>
+      <div id="image1" class="transform"></div>
+      <div class="description">
+         <h1 style="color:aqua;font-family: Verdana, Geneva, Tahoma, sans-serif;">Welcome to my Blogspot</h1>
+         <p>Inspire to create wonderful things.</p>
+      </div>
+    </li>
+  </ul>
+  <button class="custom-button" onclick="window.location.href='login.html'">Log In</button>
+  <button class="custom-button" onclick="window.location.href='signup.html'">Sign Up</button>
+</center>
+</body>
+</html>
